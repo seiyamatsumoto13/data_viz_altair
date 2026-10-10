@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "point", "color": "purple", "shape": "triangle-up", "size": 60}, "encoding": {"tooltip": [{"field": "state", "type": "nominal"}, {"field": "pop_2020", "type": "quantitative"}, {"field": "upper", "type": "quantitative"}], "x": {"field": "pop_2020", "title": "Population (2020)", "type": "quantitative"}, "y": {"field": "upper", "title": "Number of Legislative Seats", "type": "quantitative"}}, "name": "view_73eef2ce52f56794_0"}, {"mark": {"type": "point", "color": "orange", "shape": "triangle-down", "size": 60}, "encoding": {"tooltip": [{"field": "state", "type": "nominal"}, {"field": "pop_2020", "type": "quantitative"}, {"field": "upper", "type": "quantitative"}], "x": {"field": "pop_2020", "title": "Population (2020)", "type": "quantitative"}, "y": {"field": "lower", "title": "Number of Legislative Seats", "type": "quantitative"}}}, {"mark": {"type": "line", "color": "purple", "size": 1}, "encoding": {"x": {"field": "pop_2020", "type": "quantitative"}, "y": {"field": "upper", "type": "quantitative"}}, "transform": [{"on": "pop_2020", "regression": "upper"}]}, {"mark": {"type": "line", "color": "orange", "size": 1}, "encoding": {"x": {"field": "pop_2020", "type": "quantitative"}, "y": {"field": "lower", "type": "quantitative"}}, "transform": [{"on": "pop_2020", "regression": "lower"}]}], "data": {"name": "data-47a58ccc3e1f466a485807d1957970af"}, "height": 400, "params": [{"name": "param_1e9efca18e7a2868", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales", "views": ["view_73eef2ce52f56794_0"]}], "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-47a58ccc3e1f466a485807d1957970af": [{"index": 0, "state": "al", "pop_2020": 5024294, "lower": 104.0, "upper": 35.0}, {"index": 1, "state": "ak", "pop_2020": 733374, "lower": 40.0, "upper": 20.0}, {"index": 2, "state": "az", "pop_2020": 7157902, "lower": 59.0, "upper": 30.0}, {"index": 3, "state": "ar", "pop_2020": 3011490, "lower": 98.0, "upper": 35.0}, {"index": 4, "state": "ca", "pop_2020": 39538212, "lower": 79.0, "upper": 40.0}, {"index": 5, "state": "co", "pop_2020": 5773707, "lower": 65.0, "upper": 35.0}, {"index": 6, "state": "ct", "pop_2020": 3605912, "lower": 151.0, "upper": 36.0}, {"index": 7, "state": "de", "pop_2020": 989946, "lower": 41.0, "upper": 21.0}, {"index": 9, "state": "fl", "pop_2020": 21538216, "lower": 119.0, "upper": 40.0}, {"index": 10, "state": "ga", "pop_2020": 10713771, "lower": 180.0, "upper": 56.0}, {"index": 11, "state": "hi", "pop_2020": 1455274, "lower": 50.0, "upper": 25.0}, {"index": 12, "state": "id", "pop_2020": 1839117, "lower": 70.0, "upper": 34.0}, {"index": 13, "state": "il", "pop_2020": 12813469, "lower": 118.0, "upper": 59.0}, {"index": 14, "state": "in", "pop_2020": 6785442, "lower": 100.0, "upper": 50.0}, {"index": 15, "state": "ia", "pop_2020": 3190427, "lower": 100.0, "upper": 49.0}, {"index": 16, "state": "ks", "pop_2020": 2937835, "lower": 125.0, "upper": 40.0}, {"index": 17, "state": "ky", "pop_2020": 4506297, "lower": 100.0, "upper": 38.0}, {"index": 18, "state": "la", "pop_2020": 4657785, "lower": 105.0, "upper": 39.0}, {"index": 19, "state": "me", "pop_2020": 1363177, "lower": 149.0, "upper": 35.0}, {"index": 20, "state": "md", "pop_2020": 6177253, "lower": 140.0, "upper": 47.0}, {"index": 21, "state": "ma", "pop_2020": 7032933, "lower": 159.0, "upper": 40.0}, {"index": 22, "state": "mi", "pop_2020": 10077674, "lower": 110.0, "upper": 38.0}, {"index": 23, "state": "mn", "pop_2020": 5706804, "lower": 132.0, "upper": 66.0}, {"index": 24, "state": "ms", "pop_2020": 2961306, "lower": 122.0, "upper": 52.0}, {"index": 25, "state": "mo", "pop_2020": 6154889, "lower": 162.0, "upper": 30.0}, {"index": 26, "state": "mt", "pop_2020": 1084244, "lower": 100.0, "upper": 50.0}, {"index": 28, "state": "nv", "pop_2020": 3104617, "lower": 40.0, "upper": 20.0}, {"index": 29, "state": "nh", "pop_2020": 1377524, "lower": 395.0, "upper": 24.0}, {"index": 30, "state": "nj", "pop_2020": 9289039, "lower": 80.0, "upper": 39.0}, {"index": 31, "state": "nm", "pop_2020": 2117525, "lower": 70.0, "upper": 42.0}, {"index": 32, "state": "ny", "pop_2020": 20202320, "lower": 148.0, "upper": 62.0}, {"index": 33, "state": "nc", "pop_2020": 10439459, "lower": 120.0, "upper": 49.0}, {"index": 34, "state": "nd", "pop_2020": 779079, "lower": 94.0, "upper": 47.0}, {"index": 35, "state": "oh", "pop_2020": 11799331, "lower": 99.0, "upper": 33.0}, {"index": 36, "state": "ok", "pop_2020": 3959411, "lower": 101.0, "upper": 48.0}, {"index": 37, "state": "or", "pop_2020": 4237279, "lower": 59.0, "upper": 30.0}, {"index": 38, "state": "pa", "pop_2020": 13002788, "lower": 201.0, "upper": 50.0}, {"index": 39, "state": "ri", "pop_2020": 1097371, "lower": 75.0, "upper": 37.0}, {"index": 40, "state": "sc", "pop_2020": 5118422, "lower": 124.0, "upper": 46.0}, {"index": 41, "state": "sd", "pop_2020": 886668, "lower": 70.0, "upper": 35.0}, {"index": 42, "state": "tn", "pop_2020": 6910786, "lower": 99.0, "upper": 33.0}, {"index": 43, "state": "tx", "pop_2020": 29145459, "lower": 150.0, "upper": 31.0}, {"index": 44, "state": "ut", "pop_2020": 3271614, "lower": 75.0, "upper": 29.0}, {"index": 45, "state": "vt", "pop_2020": 643077, "lower": 150.0, "upper": 30.0}, {"index": 46, "state": "va", "pop_2020": 8631373, "lower": 100.0, "upper": 40.0}, {"index": 47, "state": "wa", "pop_2020": 7705267, "lower": 98.0, "upper": 49.0}, {"index": 48, "state": "wv", "pop_2020": 1793713, "lower": 99.0, "upper": 34.0}, {"index": 49, "state": "wi", "pop_2020": 5893713, "lower": 98.0, "upper": 32.0}, {"index": 50, "state": "wy", "pop_2020": 576850, "lower": 62.0, "upper": 31.0}, {"index": 51, "state": "pr", "pop_2020": 3285874, "lower": 50.0, "upper": 27.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
